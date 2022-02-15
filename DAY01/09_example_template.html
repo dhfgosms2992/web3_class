@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탬플릿 문자열</title>
+    <script>
+        // input < -- '10' 문자열
+        const input = prompt('inch 단위의 순자를 입력하세요')
+        // prompt() : 입력받은 값(input)을 문자열 자료형으로 반환한다.
+
+        // > -> 숫자형 자료형으로 변환 : Number()
+        const inch = Number(input)
+        const cm = inch * 2.54
+        inch * 2.54 // '10' * 2.54 문자열 숫자열
+
+        // 문자열 변수 연결
+        alert(inch + 'inch 는' + cm + 'cm 입니다')
+
+        // 템플릿 문자열 : 백틱 (``)으로 작성하고.
+        //  변수 등은 ${변수} 표현식 기호에 작성한다.
+        
+        // 백팁키 안에 집어넣으면 문자열 변수 연결을 할필요가 없다.
+        alert (`${inch} inch는 ${cm} cm 입니다.`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

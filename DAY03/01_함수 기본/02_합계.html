@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>함수로 합계 및 평균 구하기</title>
+    <title>함수로 합계 구하기</title>
     <script>
         // 합계를 구하는 함수
         function sum(arr) {
@@ -16,16 +16,8 @@
             return sum
         }
 
-        // 평균을 구하는 함수
-        function avg(arr) {
-            let avg = 0.0
-            avg = sum(arr) / arr.length
-            return avg
-        }
-
         let arr = [1,2,3,4,5]
-
-        document.write(`평균 : ${ avg(arr)}`)
+        document.write(`합계 : ${sum(arr)}`)
     </script>
 </head>
 <body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 변경</title>
+    <script>
+        document.addEventListener('DOMContentLoaded' , () => {
+            // class 가 img 인요소를 선택
+            const imgs = document.querySelectorAll('img')
+
+            // img.forEach ( (img, index) => {})
+            // img 목록의 각 요소를 img 로 접근한다.
+            // img 항목의 순서번호를 index 로 지정한다.
+
+            imgs.forEach ( (img, index) => {
+                const width = (index + 1) * 100 //100 200 300
+                const src = 'img/cat.jpg'
+                //  setAttribute ('속성' , '값') : 속성 값을 지정하는 메서드
+                img.setAttribute ('width', width)
+                img.setAttribute ('src', src)
+            })
+        })
+    </script>
+</head>
+<body>
+    <img src="/img/cat.jpg" alt="" class="img">
+    <img src="/img/cat.jpg" alt="" class="img">
+    <img src="/img/cat.jpg" alt="" class="img">
+    <img src="/img/cat.jpg" alt="" class="img">
+</body>
+</html>

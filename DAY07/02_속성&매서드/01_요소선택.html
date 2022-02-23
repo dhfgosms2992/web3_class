@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 선택</title>
+    <script>
+        /* 요소를 선택하는방법
+           태그 이름으로 요소 선택  : getElementByTagNmae()
+           Id 요소 선택            : getElementById()
+           Class 요소 선택         : getElementByClassName()
+           Name 요소 선택          : getElementByName()
+           선택자 요소 선택         : querySelector() 
+           선택자 모든 요소 선택     : querySelectorAll()
+        */
+        document.addEventListener('DOMContentLoaded' ,() =>{
+        //태그 이름으로 요소 선택  : getElementByTagNmae()
+        // li 태그 선택
+        const cafeList = document.getElementsByTagName('li')
+        for (let i = 0; i < cafeList.length; i++) {
+            // item(인텍스) : 인텍스로 목록의 요소를 접근
+            cafeList.item(i).style.color = '#645fce'
+            
+        }
+        // id로 요소 선택       : getElementById()
+        const idBox = document.getElementById('box')
+        idBox.style.width = '200px'
+        idBox.style.height = '200px'
+        idBox.style.backgroundColor = 'red'
+
+
+        // class 로 요소 선택    : getElementByClass()
+        const itemsBox = document.getElementsByClassName('item')
+        itemsBox[0].style.width = '200px'
+        itemsBox[0].style.height = '200px'
+        itemsBox[0].style.backgroundColor = 'royalblue'
+
+        itemsBox[1].style.width ='200px'
+        itemsBox[1].style.height ='200px'
+        itemsBox[1].style.backgroundColor = 'black'
+
+        itemsBox.item(2).style.width='200px'
+        itemsBox.item(2).style.height='300px'
+        itemsBox.item(2).style.backgroundColor='Indigo'
+
+        // name 요소 선택       : getElementByName()
+        const inputs = document.getElementsByName('input')
+        const input = inputs[0]
+
+        // 입력 태그에 키 입력시 , h1 태그에 택스트 출력
+        input.addEventListener('keyup' , (event) => {
+            const text = document.getElementById('text')
+            // input.value : input 태그 value 속성의 값 -> 입력한 택스트
+
+            text.innerText = input.value
+            // innerText    : 해당요소에 '택스트만' 지정하는 속성
+            // innerHTML    : 해당 요소에 '택스트' + 'HTML' 양식으로 지정하는 속성
+        })
+
+        // 선택자 로 요소 선택      : querySelector()
+        const ul = document.querySelector('.product-list ul')
+        ul.style.listStyleType= 'none' //리스트 마커를 없앰
+
+        // 선택자 로 모든 요소 선택     : querySelectorAll()
+        const lists = document.querySelectorAll('.product-list ul li')
+
+        lists.forEach ( (list) => {
+            // 요소.children        : 해당 요소의 자식요소들을 가져온다.
+            // list.chidren [0]     : 여기서는 img 요소
+            list.children[0].src = './img/cat.jpg'
+            list.children[0].style.width = '300px'
+        })
+        })
+    </script>
+</head>
+<body>
+    <ul class="cafe-list">
+        <li>아메리카노</li>
+        <li>카페라떼</li>
+        <li>프라프치노</li>
+        <li>자몽에이드</li>
+        <li>쌍화탕</li>
+    </ul>
+    <hr>
+
+    <div id="box"></div>
+    <hr>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <h1 id="text">입력해보세요</h1>
+    <input type="text" name="input" placeholder="입력해보세요 :)" value="">
+
+    <hr>
+
+    <div class="product-list">
+        <ul>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

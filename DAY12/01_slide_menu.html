@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 메뉴 (jquery) 이용</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/01_slide_menu.css">
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/01_slide_menu.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <a href="" class="logo"><img src="img/logo.png" alt="logo_img"></a>
+            <nav>
+                <ul>
+                    <li><a href="#">main-menu1</a></li>
+                    <li><a href="#">main-menu2</a></li>
+                    <li><a href="#">main-menu3</a></li>
+                    <li><a href="#">main-menu4</a></li>
+                </ul>
+            </nav>
+            <!-- 햄버거 메뉴 -->
+             <div class="slide-open">
+                 <span class="top"></span>
+                 <span class="middle"></span>
+                 <span class="bottom"></span>
+             </div>
+
+             <!-- 풀 서브 메뉴 -->
+             <div class="submenu"></div>
+        </header>
+        <!-- 슬라이드바 -->
+        <div class="slide">
+        <!-- 취소 -->
+        <span class="cancel"></span>
+        </div>
+        <!-- 슬라이브 바 바깥영역(어두운) -->
+    <span class="bg"></span>    
+    </div>
+</body>
+</html>

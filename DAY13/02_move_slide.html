@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>move_slide 무브 슬라이드</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/02_move_slide.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- js -->
+    <script src="js/02_move_slide.js"></script>
+</head>
+<body>
+    <h1>jQuery Move Slide</h1>
+    <div class="container">
+        <!-- 슬라이드 영역 -->
+        <div id="slide">
+            <ul class="slide-list">
+                <li class="slide-item">
+                    <img src="img/slide01.jpg" alt="slide1">
+                </li>
+
+                <li class="slide-item">
+                    <img src="img/slide02.jpg" alt="slide2">
+                </li>
+
+                <li class="slide-item">
+                    <img src="img/slide03.jpg" alt="slide3">
+                </li>
+
+                <li class="slide-item">
+                    <img src="img/slide04.jpg" alt="slide4">
+                </li>
+
+                <li class="slide-item">
+                    <img src="img/slide05.jpg" alt="slide5">
+                </li>
+            </ul>
+            <!-- 화살표 버튼 -->
+            <div class="btn-box">
+                <a href="#" class="btn prev">이전</a>
+                <a href="#" class="btn next">다음</a>
+            </div>
+            <!-- 페이지 네비게이션(닷츠) js 로 만듬-->
+            <div class="dots-box">
+                <a href="#" class="dot active"></a>
+                <a href="#" class="dot"></a>
+                <a href="#" class="dot"></a>
+                <a href="#" class="dot"></a>
+                <a href="#" class="dot"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

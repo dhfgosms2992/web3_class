@@ -78,9 +78,7 @@ $(function() {
 
     slide.on('afterChange', function(event, slick, currentSlide){
         console.log(currentSlide);
-        //  1 3 5 7 9
         let no = currentSlide + 1
-        no = (no / 2)
         $('#currentSlide').text(no)
     });
 

@@ -34,7 +34,6 @@ $(function() {
     // 스크롤 활성화
     owl.on('mousewheel', '.owl-stage', function (e) {
 
-
         // * 스크롤 크기+방향을 나타내는 속성
         // e.deltaY --(크롬,IE)--> e.originalEvent.wheelDelta
         // e.deltaY --(Firefox)--> e.originalEvent.detail

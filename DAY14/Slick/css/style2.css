@@ -7,7 +7,7 @@
 
 
 .slide-container {
-    width: 1100px;
+    width: 100%;
     height: 480px;
     margin: 150px auto;
 }
@@ -29,7 +29,7 @@ h2 {
 .slide img { 
     width: 100%;
     height: 100%;
-    border-radius: 50px;
+    /* border-radius: 50px; */
 }
 
 /* slick - 네비게이션 화살표 */
@@ -86,46 +86,49 @@ h2 {
 }
 
 
-.slick-dots li {margin-right: 20px;}
+.slick-dots li {
+    margin-right: 70px;
+}
 .slick-dots li button { }
 
 /* 닷츠 */
-/* .slick-dots li button::before { color: sandybrown;} */
+.slick-dots li button::before { color: sandybrown;}
 
 /* 헌재 닷츠 */
-/* .slick-dots li.slick-acitve button::before { color: orange;} */
+.slick-dots li.slick-acitve button::before { color: orange;}
 
 
 /* 닷츠  - 모양 커스텀 */
-/* .slick-dots li button::before
+.slick-dots li button::before
+/* 밑에 작대기 버튼  */
  {
     font-size: 0;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
+    width: 90px;
+    height: 5px;
+    /* transform: rotate(45deg); */
     background-color: sandybrown;
-} */
+}
 
 
 
-.nav-btn {
+/* .nav-btn {
     display:block;
     padding:4px;
     width: 30px;
-    height: 30px;
-    line-height: 20px;
+    height: 3px;
+    line-height: 2px;
     background-color: rgb(248, 217, 191);
     color:white;
     box-sizing: border-box;
     border-radius: 50%;
-}
+} */
 
 /* .slick-dots li.slick-acitve .nav-btn */
 
-.slick-dots li.slick-active .nav-btn {
+/* .slick-dots li.slick-active .nav-btn {
     background-color: orange;
     
-}
+} */
 
 
 
@@ -138,8 +141,8 @@ h2 {
     z-index: 100;
 }
 
-/* 슬라이드 커스텀  밝기조절*/
-/* .slick-slide {opacity:0.3;}
-.slick-current {opacity: 1;} */
+/* 슬라이드 커스텀  밝기조절 */
+ .slick-slide {opacity:0.3;}
+.slick-current {opacity: 1;}
 
-.sm-slide {width: 400px;}
+/* .sm-slide {width: 400px;} */

@@ -20,13 +20,13 @@ $(function() {
         infinite: true,                 // 무한 반복 
         speed:1000,                      // 슬라이드가 전환되는 시간
 
-        variableWidth : true,             // 가변 적인 가로 사이즈 여부
+        // variableWidth : true,             // 가변 적인 가로 사이즈 여부
 
 
-        // centerMode: true,            // 센터 모드
+        centerMode: true,            // 센터 모드
         centerPadding: '0px',       // 센터 모드 시, 내부여백
-        slidesToShow: 2,                // 보여질 슬라이드 개수
-        slidesToScroll: 2,              // 스크롤될 슬라이드 개수
+        slidesToShow: 3,                // 보여질 슬라이드 개수
+        slidesToScroll: 1,              // 스크롤될 슬라이드 개수
 
 
         pauseOnDotsHover: true,         // 페이지네이션 호버 시 자동재생 멈춤
@@ -75,8 +75,8 @@ $(function() {
         // 각 이미지  번호 표시  1 ~ 9   customPaging
          customPaging : function(slider, i){
              let no = $(slider.$slides[i]).index()
-             let span = '<span class="nav-btn">' + no + '</span>'
-             return span
+             let button = '<button>'+ no +'</button>'
+             return button
          }
 
     })

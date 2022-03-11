@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrolla.js 플러그인 (다양한 플러그인)</title>
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- scrolla.js 최신버전 -->
+    <!-- <script src="js/jquery.scrolla.js"></script>
+    <script src="js/jquery.scrolla.min.js"></script> -->
+    <!-- 다른버전 이전버전 -->
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="empty"></div>
+    <!-- 
+        scrolla.js 사용법
+
+        3.  스크롤 애니메이션 적용하기 
+
+        1) 스크롤 애니메이션을 적용할 요소에 특정 class 를 지정한다.
+
+            ex) class="animate"
+
+        2) 애니메이션 이름을 data-animate 속성에 지정한다.
+
+            ex) data-animate="bounceIn"
+
+        3) 애니메이션 재생시간을 data-duration 속성에 지정한다.
+
+            ex) data-duration="1s"
+
+        4) 애니메이션 지연시간을 data-delay 속성에 지정한다.
+
+            ex) data-delay="0.3s"
+
+        data-animate="move" 속성에 지정한 값이 스크롤 활성화가 되었을 때,
+        'animate__????move' 형식으로 클래스가 추가됩니다.
+
+
+        ex) data-animate="move" 와 같이 지정
+        스크롤 활성화 시, class="animate__move" 가 추가
+
+        //////////////////////////////////////////////////
+
+        다른 버전 scrolla.js
+
+        data-animate="move" 와 같이 지정
+        스크롤 활성화 시, class="move" 가 추가
+        move animated"
+     -->
+  <div class="animate-box">
+     <h1 class="animate" data-animate="slideUp" data-duration="1s" data-delay="0.3s">스크롤 애니메이션 적용</h1>
+  </div>
+  <div class="empty"></div>
+
+  <div class="flex-container">
+      <div class="item animate" data-animate="move">1</div>
+      <div class="item animate" data-animate="move">2</div>
+      <div class="item animate" data-animate="move">3</div>
+      <div class="item animate" data-animate="move">4</div>
+      <!-- 
+        @keyframes slideUp {
+       0%{ transform: translateY(30%); opacity: 0.3;}
+        }
+
+
+        .item.move {
+        animation: slideUp 1s;
+        }
+        -->
+    </div>
+    <div class="empty"></div>
+
+    <div class="flex-container">
+        <div class="item2 animate" data-animate="slideInLeft">1</div>
+        <div class="item2 animate" data-animate="slideInRight">2</div>
+        <!-- 
+            .flex-container .item2.slideInLeft {
+    animation: slideInLeft 0.5s ;
+    }
+
+
+    .flex-container .item2.slideInRight {
+        animation: slideInRight 0.5s ;
+    }
+
+    @keyframes slideInLeft {
+        0%{transform: translateX(-20%); opacity: 0.6;}
+    }
+
+
+    @keyframes slideInRight {
+        0%{transform: translateX(20%); opacity: 0.6;}
+    }
+         -->
+    </div>        
+    <div class="empty"></div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.empty { height: 1000px; }
+
+.animate-box {
+    text-align: center;
+    height: 400px;
+    line-height: 400px;
+    background-color: cornflowerblue;
+    color:white;
+    font-size: 50px;
+}
+/* 
+ html -> data-animate="slideUp"
+*/
+.slideUp {
+    animation : slideUp 1s;
+}
+
+@keyframes slideUp {
+    0%{ transform: translateY(30%); opacity: 0.3;}
+}
+
+.flex-container {
+    width: 1200px;
+    min-height: 400px;
+    margin: 0 auto;
+    /* 정렬 방법 */
+    display:flex;
+    justify-content: space-between;
+}
+
+.flex-container .item {
+    width: 260px;
+    height: 200px;
+    background-color: lightblue;
+    box-sizing: border-box;
+}
+
+/* 아이템들 순서대로 애니메이션 적용하기 */
+.item.move {animation-name: slideUp;}
+.item:nth-of-type(1).move {animation-duration: 0.8s;}
+.item:nth-of-type(2).move {animation-duration: 1.6s;}
+.item:nth-of-type(3).move {animation-duration: 2.0s;}
+.item:nth-of-type(4).move {animation-duration: 3.2s;}
+
+
+/* item2 */
+
+.flex-container .item2 {
+    width: 500px;
+    height: 400px;
+    background-color: chocolate;
+    box-sizing: border-box;
+}
+
+.flex-container .item2.slideInLeft {
+    animation: slideInLeft 1s ;
+}
+
+
+.flex-container .item2.slideInRight {
+    animation: slideInRight 1s ;
+}
+
+@keyframes slideInLeft {
+    0%{transform: translateX(-20%); opacity: 0.6;}
+}
+
+
+@keyframes slideInRight {
+    0%{transform: translateX(20%); opacity: 0.6;}
+}

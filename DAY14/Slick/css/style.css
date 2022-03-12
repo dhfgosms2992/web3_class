@@ -133,7 +133,7 @@ h2 {
 .page {
     position: absolute;
     bottom:-5%;
-    right: 5%;
+    right: 32%;
     font-size: 20px;
     z-index: 100;
 }

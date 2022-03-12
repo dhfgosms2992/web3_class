@@ -3,7 +3,7 @@ $(function() {
     // 슬라이드 이미지이동에 따른 번호 표시  79 note
     // /   1 / 9 슬래시 표시
     let slide =  $('.slide-container')
-    let slideCount = $('.slide').length
+    let slideCount = $('.slide').length /2
     // alert(slideCount)
 
     $('#currentSlide').text(1)
@@ -74,16 +74,22 @@ $(function() {
         // 네비게이션 닷츠 
         // 각 이미지  번호 표시  1 ~ 9   customPaging
          customPaging : function(slider, i){
-             let no = $(slider.$slides[i]).index()
+            //  1 2 3 4 5 = .index() -1
+             let no = $(slider.$slides[i]).index() -1
              let span = '<span class="nav-btn">' + no + '</span>'
              return span
          }
 
     })
      // /   1 / 9 슬래시 표시
+
+     let pageGap = 0
     slide.on('afterChange' ,function(event, slick, currentSlide, nextSlide){
         console.log(currentSlide);
+        // 1 3 5 7 9
         let no = currentSlide + 1
+        // 0.5 1.5 2.5 3.5 4.5  // 반올림
+        no = Math.round( no / 2 )
         $('#currentSlide').text(no)
     })
 

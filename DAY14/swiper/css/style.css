@@ -1,5 +1,9 @@
+ h1 {text-align: center;}
+
+
 .swiper {
-    width: 600px;
+  width: 400px;
+    /* width: 1400px; */
     height: 300px;
   }
 
@@ -62,4 +66,33 @@
 
 .swiper-button-next::after {
   font-size: 20px;
+}
+
+
+
+/* thumb 썸네일 */
+
+.thumb {
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+
+ /* img */
+ .thumb .swiper-slide img {  width: 100%; height: 100%;}
+
+
+ /* 이미지 클릭전 밝기 */
+ .thumb .swiper-slide img { 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+
+/* 이미지 클릭후 밝기 */
+.thumb .swiper-slide-thumb-active img {
+  filter: brightness(100%);
 }

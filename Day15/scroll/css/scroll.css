@@ -20,8 +20,10 @@ header {
 }
 
 .scroll-title { position: relative; left: 80vw; }
-.scroll-title h2 { font-size: 100px; }
+.scroll-title h2 { font-size: 30px; }
 
+
+/* 화살표버튼 플로팅 */
 .floating {
     position: absolute;
     right: 20px;
@@ -35,6 +37,7 @@ header {
 
 .floating a {
     position: absolute;
+    /* 가운데 정렬 */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
